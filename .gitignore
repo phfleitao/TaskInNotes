@@ -1,0 +1,16 @@
+node_modules/
+main.js
+dist/
+test-results/
+playwright-report/
+coverage/
+.superpowers/
+.test-build/
+tests/obsidianTestVault/
+.obsidian/
+data.json
+*.zip
+.env*
+*.log
+.DS_Store
+Thumbs.db

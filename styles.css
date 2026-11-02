@@ -1,0 +1,90 @@
+/* All visual colors come from the active Obsidian theme. */
+.taskinnotes-settings-version { color: var(--text-muted); font-size: .85em; margin-top: -8px; }
+.taskinnotes-settings-heading { margin-left: 0 !important; padding-left: 0 !important; }
+.taskinnotes-block {
+  position: relative;
+  --tin-border: var(--background-modifier-border);
+  --tin-accent: var(--interactive-accent);
+  color: var(--text-normal);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  background: var(--background-primary);
+  border: 1px solid var(--tin-border);
+  border-radius: 10px;
+  padding: 18px 20px 14px;
+}
+.taskinnotes-block::before { content: 'Task in Notes'; position: absolute; right: 28px; bottom: 100%; margin-bottom: 3px; padding: 2px 6px; border-radius: 3px; background: var(--background-secondary); color: var(--text-muted); font-size: 11px; line-height: 1.4; opacity: 0; pointer-events: none; transition: opacity .12s; }
+.taskinnotes-block:hover::before { opacity: 1; }
+.taskinnotes-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+.taskinnotes-brand { font-size: 1.15em; font-weight: 700; line-height: 1.4; letter-spacing: -.015em; }
+.taskinnotes-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; }
+.taskinnotes-block button.taskinnotes-add,
+.taskinnotes-block button.taskinnotes-refresh { display: inline-flex; align-items: center; gap: 6px; border: 0; border-radius: 6px; padding: 5px 8px; height: auto; min-height: 30px; background: transparent; box-shadow: none; font-size: .9em; font-weight: 500; color: var(--text-muted); }
+.taskinnotes-block button.taskinnotes-add { color: var(--tin-accent); }
+.taskinnotes-block button.taskinnotes-add:hover:not(:disabled),
+.taskinnotes-block button.taskinnotes-refresh:hover:not(:disabled) { background: var(--background-modifier-hover); color: var(--text-normal); }
+.taskinnotes-add-icon { display: inline-flex; align-items: center; justify-content: center; width: 19px; height: 19px; border-radius: 50%; font-size: 19px; font-weight: 400; line-height: 1; color: var(--tin-accent); }
+.taskinnotes-add:hover:not(:disabled) .taskinnotes-add-icon { background: var(--tin-accent); color: var(--text-on-accent); }
+.taskinnotes-refresh > span:first-child { font-size: 18px; line-height: 1; }
+.taskinnotes-filter { display: inline-flex; align-items: baseline; flex-wrap: wrap; gap: 6px; max-width: 100%; color: var(--text-muted); font-size: .82em; overflow-wrap: anywhere; margin-bottom: 8px; }
+.taskinnotes-filter-label { color: var(--text-faint); font-weight: 600; }
+.taskinnotes-list { list-style: none !important; padding: 0 !important; margin: 0 !important; }
+.taskinnotes-list > li { list-style: none; padding: 0 !important; margin: 0 !important; }
+.taskinnotes-task { display: flex; align-items: flex-start; gap: 8px; padding: 6px 0; border-bottom: 1px solid var(--tin-border); margin: 0 !important; }
+.taskinnotes-block button.taskinnotes-complete { flex: 0 0 18px; width: 18px; height: 18px; min-width: 18px; min-height: 18px; border: 1.5px solid var(--text-muted); border-radius: 50%; padding: 0; margin-top: 2px; background: transparent; box-shadow: none; cursor: pointer; }
+.taskinnotes-block button.taskinnotes-complete:hover:not(:disabled) { background: var(--background-modifier-hover); border-color: var(--tin-accent); }
+.taskinnotes-complete:hover:not(:disabled)::after { content: '✓'; color: var(--tin-accent); font-size: 12px; }
+.taskinnotes-task-body { flex: 1; min-width: 0; }
+.taskinnotes-block a.taskinnotes-title { display: block; white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.35; color: var(--text-normal); text-decoration: none; }
+.taskinnotes-block a.taskinnotes-title:hover { color: var(--text-normal); text-decoration: underline; }
+.taskinnotes-due { display: block; font-size: .82em; color: var(--text-accent); margin-top: 3px; overflow-wrap: anywhere; }
+.taskinnotes-project { flex-shrink: 1; max-width: 30%; margin-top: 3px; color: var(--text-muted); font-size: .82em; overflow-wrap: anywhere; text-align: right; }
+.taskinnotes-project-icon { margin-right: 4px; color: var(--text-faint); }
+.taskinnotes-empty, .taskinnotes-muted { color: var(--text-muted); padding: 8px 0; line-height: 1.5; }
+.taskinnotes-fetched { color: var(--text-faint); font-size: .75em; margin-top: 12px; overflow-wrap: anywhere; }
+.taskinnotes-error, .taskinnotes-warning, .taskinnotes-message { padding: 9px 11px; margin: 8px 0; border-radius: 6px; line-height: 1.5; }
+.taskinnotes-error { color: var(--text-error); background: var(--background-modifier-error); }
+.taskinnotes-warning { color: var(--text-warning); background: var(--background-secondary); }
+.taskinnotes-message { background: var(--background-secondary); }
+.taskinnotes-block button:disabled, .taskinnotes-create button:disabled { opacity: .5; cursor: default; }
+.taskinnotes-block button:focus-visible, .taskinnotes-create :focus-visible { outline: 2px solid var(--tin-accent, var(--interactive-accent)); outline-offset: 3px; }
+.taskinnotes-create { display: flex; flex-direction: column; gap: 14px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 14px; }
+.taskinnotes-create input, .taskinnotes-create textarea, .taskinnotes-create select, .taskinnotes-create button, .taskinnotes-create label, .taskinnotes-create .taskinnotes-option-field { font-family: inherit; font-size: 1em; }
+.taskinnotes-create-options input, .taskinnotes-create-options select, .taskinnotes-create-options .taskinnotes-dropdown > button { height: 32px; box-sizing: border-box; margin: 0; }
+.taskinnotes-visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.taskinnotes-create input.taskinnotes-create-title { width: 100%; min-height: 38px; padding: 4px 0; background: transparent; border: 0; box-shadow: none; font-size: 1em; font-weight: 400; }
+.taskinnotes-date-row { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+.taskinnotes-date-row label { font-size: 1em; font-weight: 400; color: var(--text-muted); }
+.taskinnotes-create .taskinnotes-date-row input { width: auto; max-width: 100%; }
+.taskinnotes-destination { color: var(--text-muted); font-size: .88em; border-top: 1px solid var(--background-modifier-border); padding-top: 12px; }
+.taskinnotes-destination span { color: var(--text-faint); margin-right: 4px; }
+.taskinnotes-form-actions { display: flex; justify-content: flex-end; align-items: center; gap: 8px; flex-wrap: wrap; }
+@media (max-width: 480px) { .taskinnotes-toolbar { align-items: flex-start; flex-wrap: wrap; } .taskinnotes-block { padding: 14px; } }
+.taskinnotes-children { margin-left: 28px; }
+.taskinnotes-block button.taskinnotes-expand { border: 0; box-shadow: none; background: transparent; color: var(--text-muted); padding: 0; width: 16px; min-width: 16px; height: 20px; }
+.taskinnotes-expand span { display: inline-block; width: 6px; height: 6px; border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; transform: rotate(45deg) translate(-2px, -2px); }
+.taskinnotes-expand[aria-expanded="false"] span { transform: rotate(-45deg) translate(-1px, -1px); }
+.taskinnotes-expand-spacer { width: 16px; flex: 0 0 16px; }
+.taskinnotes-create textarea { width: 100%; min-height: 60px; resize: vertical; }
+.taskinnotes-create-options { display: flex; gap: 12px; align-items: end; flex-wrap: wrap; }
+.taskinnotes-create-options label, .taskinnotes-option-field { display: flex; flex-direction: column; gap: 6px; color: var(--text-muted); }
+.taskinnotes-priority-1 { --tin-priority: var(--color-red, #d1453b); }
+.taskinnotes-priority-2 { --tin-priority: var(--color-orange, #eb8909); }
+.taskinnotes-priority-3 { --tin-priority: var(--color-blue, #246fe0); }
+.taskinnotes-priority-4 { --tin-priority: var(--text-muted); }
+.taskinnotes-block button.taskinnotes-complete { border-color: var(--tin-priority, var(--text-muted)); }
+.taskinnotes-block button.taskinnotes-complete:hover:not(:disabled) { border-color: var(--tin-priority, var(--text-muted)); }
+.taskinnotes-flag { width: 16px; height: 16px; flex: 0 0 16px; color: var(--tin-priority); }
+.taskinnotes-priority-4.taskinnotes-flag path { fill: none; }
+.taskinnotes-dropdown { position: relative; }
+.taskinnotes-create .taskinnotes-dropdown > button { display: flex; align-items: center; gap: 7px; min-height: 32px; max-width: 100%; }
+.taskinnotes-dropdown-menu { position: absolute; z-index: 5; top: calc(100% + 4px); left: 0; width: max-content; min-width: 0; max-height: 200px; overflow: auto; padding: 4px; border: 1px solid var(--background-modifier-border); border-radius: 7px; background: var(--background-primary); box-shadow: 0 4px 14px var(--background-modifier-box-shadow); }
+.taskinnotes-dropdown-menu:popover-open { position: fixed; inset: auto; margin: 0; box-sizing: border-box; }
+.taskinnotes-create .taskinnotes-dropdown-menu button { display: flex; justify-content: flex-start; align-items: center; gap: 8px; width: 100%; height: auto; min-height: 30px; margin: 0; padding: 5px 4px; border: 0; box-shadow: none; background: transparent; text-align: left; white-space: nowrap; }
+.taskinnotes-create .taskinnotes-dropdown-menu button:hover, .taskinnotes-label-menu label:hover { background: var(--background-modifier-hover); }
+.taskinnotes-label-dropdown > button { width: 100%; justify-content: space-between; }
+.taskinnotes-selected-labels { display: flex; flex-wrap: wrap; gap: 4px; text-align: left; }
+.taskinnotes-label-chip { padding: 2px 6px; border-radius: 4px; background: var(--background-secondary); }
+.taskinnotes-label-menu { width: 100%; box-sizing: border-box; }
+.taskinnotes-label-menu label { display: flex; align-items: center; gap: 8px; padding: 6px; color: var(--text-normal); }
+.taskinnotes-no-labels { display: block; padding: 6px; color: var(--text-muted); }

@@ -1,0 +1,5 @@
+{
+  "id": "taskinnotes", "name": "TaskInNotes", "version": "0.1.0",
+  "minAppVersion": "1.11.5", "description": "Your tasks, searchable in your notes. Display Todoist tasks with searchable snapshots.",
+  "author": "TaskInNotes", "isDesktopOnly": false
+}
